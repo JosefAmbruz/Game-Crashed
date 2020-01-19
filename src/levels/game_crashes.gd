@@ -4,10 +4,10 @@ var crash_list = {
 	#holding values of crashes
 	"#001" : false, #
 	"#002" : false, #
-	"#003" : false,
-	"#004" : false,
-	"#005" : false,
-	"#006" : false,
+	"#003" : false, #
+	"#004" : false, #
+	"#005" : false, #
+	"#006" : false, #
 	"#007" : false,
 	"#008" : false,
 	"#009" : false,
