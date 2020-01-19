@@ -24,12 +24,18 @@ var crash_list = {
 	"#020" : false,		#20
 }
 
+var crash_count = len(crash_list.keys())
+
 func instance_crash_popup(title = "game crashed", text = "game crashed", id = "#000") -> AcceptDialog:
 	var popup = AcceptDialog.new()
-	popup.set_position(Vector2(45.5, 35.5))
+	popup.set_position(Vector2(0, 25))
 	popup.set_title(title.to_upper())
 	popup.set_text(text.to_upper())
+	popup.set_resizable(true)
+	popup.set_autowrap(true)
+	popup.set_custom_minimum_size(Vector2(160,0))
 	get_parent().add_child(popup)
+	crash_list[id] = true
 	return popup
 	
 func _ready():
