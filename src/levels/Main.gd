@@ -1,5 +1,8 @@
 extends "res://src/levels/level_script.gd"
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("back"):
+		get_tree().quit()
 
 #####Menu Buttons#####
 func _on_Options_button_up() -> void:

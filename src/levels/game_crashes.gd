@@ -8,20 +8,20 @@ var crash_list = {
 	"#004" : false, #
 	"#005" : false, #
 	"#006" : false, #
-	"#007" : false,
-	"#008" : false,
-	"#009" : false,
-	"#010" : false,
-	"#011" : false,
-	"#012" : false,
-	"#013" : false,
-	"#014" : false,
-	"#015" : false,
-	"#016" : false,
-	"#017" : false,
-	"#018" : false,
-	"#019" : false,
-	"#020" : false,		#20
+	"#007" : false, #
+#	"#008" : false,
+#	"#009" : false,
+#	"#010" : false,
+#	"#011" : false,
+#	"#012" : false,
+#	"#013" : false,
+#	"#014" : false,
+#	"#015" : false,
+#	"#016" : false,
+#	"#017" : false,
+#	"#018" : false,
+#	"#019" : false,
+#	"#020" : false,		#20
 }
 
 var crash_count = len(crash_list.keys())

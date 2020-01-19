@@ -26,6 +26,6 @@ func _process(delta: float) -> void:
 	#007
 	if Input.is_action_just_pressed("mouse_left"):
 		click_count += 1
-	if click_count == 10:
+	if click_count == 20:
 		GameCrashes.instance_crash_popup("game crashed","mouse button was overloaded!", "#007").popup()
 		click_count += 1
