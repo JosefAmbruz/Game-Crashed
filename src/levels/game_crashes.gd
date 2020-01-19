@@ -26,6 +26,7 @@ var crash_list = {
 
 var crash_count = len(crash_list.keys())
 
+
 func instance_crash_popup(title = "game crashed", text = "game crashed", id = "#000") -> AcceptDialog:
 	var popup = AcceptDialog.new()
 	popup.set_position(Vector2(0, 25))
@@ -35,6 +36,7 @@ func instance_crash_popup(title = "game crashed", text = "game crashed", id = "#
 	popup.set_autowrap(true)
 	popup.set_custom_minimum_size(Vector2(160,0))
 	get_parent().add_child(popup)
+	SfxPlayer.play()
 	crash_list[id] = true
 	return popup
 	

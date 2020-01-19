@@ -23,6 +23,8 @@ config/icon="res://icon.png"
 [autoload]
 
 GameCrashes="*res://src/levels/game_crashes.gd"
+SfxPlayer="*res://src/levels/SfxPlayer.tscn"
+GameCondition="*res://src/levels/global_checker.gd"
 
 [display]
 
