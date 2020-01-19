@@ -2,8 +2,8 @@ extends Node
 
 var crash_list = {
 	#holding values of crashes
-	"#001" : false,
-	"#002" : false,
+	"#001" : false, #
+	"#002" : false, #
 	"#003" : false,
 	"#004" : false,
 	"#005" : false,

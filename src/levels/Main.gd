@@ -13,7 +13,7 @@ func _on_Exit_button_up() -> void:
 
 #####Crashes#####
 func _on_Play_button_up() -> void:
-	GameCrashes.instance_crash_popup("game crashed", "congratulations, you crashed the game for the first time. but there is another %s ways you can crash this game..." % str(int(GameCrashes.crash_count) -1), "#001").popup()
+	GameCrashes.instance_crash_popup("game crashed", "congratulations, you crashed the game. go to crash logs to see more info", "#001").popup()
 
 func _on_Crash002_mouse_entered() -> void:
 		GameCrashes.instance_crash_popup("game crashed","error, cursor out of reach", "#002").popup()
