@@ -77,7 +77,8 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -6
 
 [node name="Title" type="Position2D" parent="."]
 position = Vector2( 128.848, 17.4535 )
-rotation = -0.0728074
+rotation = 0.0267075
+scale = Vector2( 1.2, 1.2 )
 __meta__ = {
 "_edit_group_": true
 }
