@@ -1,6 +1,7 @@
 extends "res://src/levels/level_script.gd"
 
 var help = [
+	"Go to crash logs to see what crashes you did!",
 	"Click not to play",
 	"Be careful where you put your cursor",
 	"Don't be minimalist",
@@ -9,6 +10,9 @@ var help = [
 	"Is there any music? And what about sfx? And both?",
 	"Your mouse can be easily overloaded"
 ]
+
+
+
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("back"):
