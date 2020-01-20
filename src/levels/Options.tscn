@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/GUI/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://assets/Background/animated_background_resource.tres" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/levels/Options.gd" type="Script" id=4]
 [ext_resource path="res://src/levels/Main.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/levels/OptionsItem/Item.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/BossMain.wav" type="AudioStream" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "animated_background_resource.tres 0"
@@ -100,6 +101,16 @@ margin_bottom = 56.4394
 
 [node name="Label" parent="Opt5" index="0"]
 text = "OPTION 5"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="credits" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -19.0
+margin_right = 256.0
+text = "music by SketchyLogic"
 
 [editable path="Opt1"]
 

@@ -12,7 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#003
 	if OS.is_window_minimized():
-		GameCrashes.instance_crash_popup("game crashed","minimized window caused the crash", "#003").popup()
+		GameCrashes.instance_crash_popup("game crashed","minimizing game window caused the crash", "#003").popup()
 		OS.set_window_minimized(false)
 	#004
 	if OS.get_window_size() > init_win_size and completed == false :
