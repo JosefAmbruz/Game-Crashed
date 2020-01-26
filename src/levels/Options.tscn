@@ -70,8 +70,18 @@ size_flags_vertical = 0
 margin_top = -49.1418
 margin_bottom = -29.1418
 
-[node name="Label" parent="Opt1" index="0"]
-text = "Music"
+[node name="HSlider" type="HSlider" parent="Opt1"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -6.0
+margin_bottom = 6.0
+allow_greater = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Opt2" parent="." instance=ExtResource( 6 )]
 margin_top = -27.9124
@@ -85,7 +95,7 @@ margin_top = -6.68289
 margin_bottom = 13.3171
 
 [node name="Label" parent="Opt3" index="0"]
-text = "OPTION 3"
+text = "Editable Title"
 
 [node name="Opt4" parent="." instance=ExtResource( 6 )]
 margin_top = 15.21
