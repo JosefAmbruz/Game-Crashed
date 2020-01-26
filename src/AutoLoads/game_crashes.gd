@@ -2,6 +2,7 @@ extends Node
 
 var crash_list = {
 	#holding values of crashes
+<<<<<<< Updated upstream:src/levels/game_crashes.gd
 	"#001" : false, #
 	"#002" : false, #
 	"#003" : false, #
@@ -10,6 +11,16 @@ var crash_list = {
 	"#006" : false, #
 	"#007" : false, #
 #	"#008" : false,
+=======
+	"#001" : false, #Play button
+	"#002" : false, #Cursor out of reach
+	"#003" : false, #Window minimized
+	"#004" : false, #Window resized
+	"#005" : false, #Window positioned behind the screen
+	"#006" : false, #Music and sfx played at once
+	"#007" : false, #Mouse button pressed 20 times
+	"#008" : false, #Title changed
+>>>>>>> Stashed changes:src/AutoLoads/game_crashes.gd
 #	"#009" : false,
 #	"#010" : false,
 #	"#011" : false,

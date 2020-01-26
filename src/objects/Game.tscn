@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/GUI/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/GUI/title_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/objects/Game.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.6779, 7.48431 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 1 )
+
+[node name="Game" type="Node"]
+
+[node name="Game" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Text" type="Label" parent="Game"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -31.0
+margin_top = -13.0
+margin_right = 34.0
+margin_bottom = 11.0
+rect_pivot_offset = Vector2( -115.184, 18.5363 )
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "GAME"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Game"]
+position = Vector2( -0.221596, 0.26589 )
+shape = SubResource( 1 )
+
+[node name="CollisionChecker" type="Area2D" parent="Game"]
+
+[node name="Collision" type="CollisionShape2D" parent="Game/CollisionChecker"]
+position = Vector2( -22, 0 )
+shape = SubResource( 2 )
+[connection signal="input_event" from="Game" to="Game" method="_on_Game_input_event"]
+[connection signal="area_entered" from="Game/CollisionChecker" to="Game" method="_on_CollisionChecker_area_entered"]

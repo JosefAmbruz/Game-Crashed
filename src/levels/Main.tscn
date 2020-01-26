@@ -1,10 +1,16 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=9 format=2]
+=======
+[gd_scene load_steps=11 format=2]
+>>>>>>> Stashed changes
 
 [ext_resource path="res://assets/Background/animated_background_resource.tres" type="Texture" id=1]
 [ext_resource path="res://assets/GUI/default_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://assets/GUI/default_theme.tres" type="Theme" id=3]
-[ext_resource path="res://assets/GUI/title_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://src/levels/Main.gd" type="Script" id=5]
+[ext_resource path="res://src/objects/Game.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/objects/Crash.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/objects/Ed.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "animated_background_resource.tres 0"
@@ -19,9 +25,10 @@
 0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 144.907, 10 )
+extents = Vector2( 150, 10 )
 
 [sub_resource type="RectangleShape2D" id=3]
+<<<<<<< Updated upstream
 extents = Vector2( 10, 98.3804 )
 
 [node name="MainMenu" type="Control"]
@@ -33,10 +40,12 @@ margin_left = -128.0
 margin_top = -75.0
 margin_right = 128.0
 margin_bottom = 75.0
+=======
+extents = Vector2( 10, 120 )
+
+[node name="MainMenu" type="Node"]
+>>>>>>> Stashed changes
 script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -44,6 +53,7 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0 )
 
+<<<<<<< Updated upstream
 [node name="UI" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -76,6 +86,17 @@ margin_left = 90.0
 margin_top = 57.0
 margin_right = 165.0
 margin_bottom = 150.0
+=======
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_top = -97.0
+margin_right = 43.0
+margin_bottom = -3.99982
+>>>>>>> Stashed changes
 size_flags_horizontal = 4
 size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
@@ -116,22 +137,86 @@ text = "Exit"
 [node name="Crash002" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crash002"]
-position = Vector2( 137.732, 166.362 )
+position = Vector2( 140, 170 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Crash002"]
-position = Vector2( 133.864, -12.3805 )
+position = Vector2( 140, -10 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Crash002"]
-position = Vector2( -12.3804, 78.9253 )
+position = Vector2( -10, 80 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Crash002"]
-position = Vector2( 273.917, 78.1515 )
+position = Vector2( 280, 80 )
 shape = SubResource( 3 )
+<<<<<<< Updated upstream
 [connection signal="button_up" from="UI/VBoxContainer/Buttons/Play" to="." method="_on_Play_button_up"]
 [connection signal="button_up" from="UI/VBoxContainer/Buttons/Options" to="." method="_on_Options_button_up"]
 [connection signal="button_up" from="UI/VBoxContainer/Buttons/CrashLogs" to="." method="_on_CrashLogs_button_up"]
 [connection signal="button_up" from="UI/VBoxContainer/Buttons/Exit" to="." method="_on_Exit_button_up"]
 [connection signal="mouse_entered" from="Crash002" to="." method="_on_Crash002_mouse_entered"]
+=======
+
+[node name="Help" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -27.0
+margin_top = -18.0
+margin_right = -9.0
+margin_bottom = 3.0
+text = "?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="Help"]
+margin_left = -50.0
+margin_top = -80.0
+margin_right = 20.0
+margin_bottom = -10.0
+text = "\"Click the button to show help\""
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Help"]
+one_shot = true
+
+[node name="Game" parent="." instance=ExtResource( 6 )]
+
+[node name="Game" parent="Game" index="0"]
+position = Vector2( 86, 31 )
+
+[node name="CollisionChecker" parent="Game/Game" index="2"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Crash" parent="." instance=ExtResource( 7 )]
+
+[node name="Crash" parent="Crash" index="0"]
+position = Vector2( 144, 31 )
+collision_layer = 2
+collision_mask = 0
+
+[node name="Ed" parent="." instance=ExtResource( 8 )]
+
+[node name="Ed" parent="Ed" index="0"]
+position = Vector2( 187, 31 )
+z_index = -1
+[connection signal="button_up" from="Menu/Play" to="." method="_on_Play_button_up"]
+[connection signal="button_up" from="Menu/Options" to="." method="_on_Options_button_up"]
+[connection signal="button_up" from="Menu/CrashLogs" to="." method="_on_CrashLogs_button_up"]
+[connection signal="button_up" from="Menu/Exit" to="." method="_on_Exit_button_up"]
+[connection signal="mouse_entered" from="Crash002" to="." method="_on_Crash002_mouse_entered"]
+[connection signal="pressed" from="Help" to="." method="_on_Help_pressed"]
+
+[editable path="Game"]
+
+[editable path="Crash"]
+
+[editable path="Ed"]
+>>>>>>> Stashed changes

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/objects/Game.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/objects/Crash.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/objects/Ed.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=4]
+resource_name = "TitleAnimation"
+length = 2.0
+loop = true
+step = 0.2
+
+[node name="Title" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "TitleAnimation"
+anims/TitleAnimation = SubResource( 4 )
+
+[node name="Game" parent="." instance=ExtResource( 1 )]
+position = Vector2( -51, 0 )
+
+[node name="Crash" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 0 )
+
+[node name="Ed" parent="." instance=ExtResource( 3 )]
+position = Vector2( 51, 0 )

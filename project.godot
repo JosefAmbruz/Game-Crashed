@@ -15,16 +15,16 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Game Crashed"
+config/name="Game Crashed Jam"
 run/main_scene="res://src/levels/Main.tscn"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
 
 [autoload]
 
-GameCrashes="*res://src/levels/game_crashes.gd"
-SfxPlayer="*res://src/levels/SfxPlayer.tscn"
-GameCondition="*res://src/levels/global_checker.gd"
+GameCrashes="*res://src/AutoLoads/game_crashes.gd"
+SfxPlayer="*res://src/AutoLoads/SfxPlayer.tscn"
+GameCondition="*res://src/AutoLoads/global_checker.gd"
 
 [display]
 

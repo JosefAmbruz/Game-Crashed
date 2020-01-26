@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/GUI/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/GUI/title_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/objects/Ed.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14, 6 )
+
+[node name="Ed" type="Node"]
+
+[node name="Ed" type="Area2D" parent="."]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Text" type="Label" parent="Ed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -13.0
+margin_right = 34.0
+margin_bottom = 11.0
+rect_pivot_offset = Vector2( -115.184, 18.5363 )
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "ED"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Ed"]
+shape = SubResource( 1 )
+[connection signal="input_event" from="Ed" to="Ed" method="_on_Ed_input_event"]

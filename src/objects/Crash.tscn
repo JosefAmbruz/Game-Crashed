@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/GUI/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/GUI/title_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/objects/Crash.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28.3436, 5.80336 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4, 3 )
+
+[node name="Crash" type="Node"]
+
+[node name="Crash" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Text" type="Label" parent="Crash"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -13.0
+margin_right = 34.0
+margin_bottom = 11.0
+rect_pivot_offset = Vector2( -115.184, 18.5363 )
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "CRASH"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Collision" type="CollisionShape2D" parent="Crash"]
+position = Vector2( 0.146, 0.143753 )
+shape = SubResource( 1 )
+
+[node name="collision" type="Area2D" parent="Crash" groups=[
+"Title",
+]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crash/collision"]
+position = Vector2( 31, 0 )
+rotation = -1.5708
+shape = SubResource( 2 )
+[connection signal="input_event" from="Crash" to="Crash" method="_on_Crash_input_event"]
